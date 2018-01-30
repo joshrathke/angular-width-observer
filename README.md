@@ -8,25 +8,31 @@ Install using NPM
 
 In order to use the directive you will need to import the `AngularWidthObserverModule` into the module's you want to use the `AngularWidthObserverDirective` in.
 
-    import { AngularWidthObserverModule } from 'angular-width-observer;
+```typescript
+import { AngularWidthObserverModule } from 'angular-width-observer;
     
-    @NgModule({
-      imports: [
-        AngularWidthObserverModule
-      ],
-    })
-    export class AppModule { }
+@NgModule({
+  imports: [
+    AngularWidthObserverModule
+   ],
+})
+export class AppModule { }
+```
 
 ## Usage
 
 Once installed, you can bind the directive to components and elements.
 
-    <app-component AngularWidthObserver></app-component>
+```html
+<app-component AngularWidthObserver></app-component>
+```
 
 **Custom Breakpoints**
 The Directive doesn't know what you want your breakpoints to be unless you tell it what you want. Bind your breakpoint settings to the Directive by setting the `AngularWidthObserverOptions` input on the Component being monitored.
 
-    <app-component AngularWidthObserver [AngularWidthObserverOptions]="{breakpoints: { compact: 520, normal: 640 }, max: 'wide'}"></app-component>
+```html
+<app-component AngularWidthObserver [AngularWidthObserverOptions]="{breakpoints: { compact: 520, normal: 640 }, max: 'wide'}"></app-component>
+```
 
 Angular Width Observer processes the breakpoints from a bottom up perspective. This means that the breakpoint classifications defined take place within the range below the specified value. The max property is the width classification given to any element that is wider than the largest breakpoint.
 
@@ -37,12 +43,14 @@ There are a couple ways to retrieve the values as they are updated.
 
 **UpdateElementWidth** - Event Emitter that emits a string representing the width classification of the current breakpoint.
 
-    // Listen to Updates in Component Pixel Width
-    @HostListener('UpdateElementPixelWidth', ['$event']) adjustComponentPixelWidth(ComponentPixelWidth) {
-		this.ComponentPixelWidth = ComponentPixelWidth;
-	}
+```typescript
+// Listen to Updates in Component Pixel Width
+@HostListener('UpdateElementPixelWidth', ['$event']) adjustComponentPixelWidth(ComponentPixelWidth) {
+    this.ComponentPixelWidth = ComponentPixelWidth;
+}
     
-    // Listen to Updates in Component Width Classification
-	@HostListener('UpdateElementWidth', ['$event']) adjustComponentWidth(ComponentWidth) {
-		this.ComponentWidth = ComponentWidth;
-	}
+// Listen to Updates in Component Width Classification
+@HostListener('UpdateElementWidth', ['$event']) adjustComponentWidth(ComponentWidth) {
+    this.ComponentWidth = ComponentWidth;
+}
+```
