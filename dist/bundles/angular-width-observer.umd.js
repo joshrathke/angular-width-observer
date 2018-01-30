@@ -5,7 +5,7 @@
 }(this, (function (exports,core,Subject) { 'use strict';
 
 // Import RxJs Dependencies
-var AngularWidthObserverDirective = (function () {
+var AngularWidthObserverDirective = /** @class */ (function () {
     /**
      * @param {?} Element
      */
@@ -26,7 +26,6 @@ var AngularWidthObserverDirective = (function () {
         this.watchElementPixelWidth()
             .distinctUntilChanged(function (_PrevValue, _CurValue) { return _PrevValue === _CurValue; })
             .subscribe(function (_ElementPixelWidth) {
-            console.log(_ElementPixelWidth);
             // Emit the Element Pixel Width
             _this.UpdateElementPixelWidth.emit(_ElementPixelWidth);
             // Define the Command Module Width Classification
@@ -36,7 +35,6 @@ var AngularWidthObserverDirective = (function () {
         this.watchElementWidth()
             .distinctUntilChanged(function (_PrevValue, _CurValue) { return _PrevValue === _CurValue; })
             .subscribe(function (_ElementWidth) {
-            console.log(_ElementWidth);
             // Emit the Command Module Width
             _this.UpdateElementWidth.emit(_ElementWidth);
         });
@@ -111,7 +109,7 @@ AngularWidthObserverDirective.propDecorators = {
     'UpdateElementWidth': [{ type: core.Output },],
 };
 // Import Angular Component Width Observer Directive
-var AngularWidthObserverModule = (function () {
+var AngularWidthObserverModule = /** @class */ (function () {
     function AngularWidthObserverModule() {
     }
     return AngularWidthObserverModule;

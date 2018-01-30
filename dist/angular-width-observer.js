@@ -23,7 +23,6 @@ class AngularWidthObserverDirective {
         this.watchElementPixelWidth()
             .distinctUntilChanged((_PrevValue, _CurValue) => _PrevValue === _CurValue)
             .subscribe(_ElementPixelWidth => {
-            console.log(_ElementPixelWidth);
             // Emit the Element Pixel Width
             this.UpdateElementPixelWidth.emit(_ElementPixelWidth);
             // Define the Command Module Width Classification
@@ -33,7 +32,6 @@ class AngularWidthObserverDirective {
         this.watchElementWidth()
             .distinctUntilChanged((_PrevValue, _CurValue) => _PrevValue === _CurValue)
             .subscribe(_ElementWidth => {
-            console.log(_ElementWidth);
             // Emit the Command Module Width
             this.UpdateElementWidth.emit(_ElementWidth);
         });
