@@ -1,0 +1,17 @@
+{
+  "name": "ng-component-width-observer",
+  "version": "1.0.0",
+  "description": "The Angular Component Width Observer uses a simple Directive to observe changes to the width of a Component. The plugin can be configured to emit either the pixel width of the Component, or emit strings representing pre-defined width breakpoints.",
+  "main": "angular-width-observer.module.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "Component",
+    "Directive",
+    "Responsive"
+  ],
+  "author": "Josh Rathke",
+  "license": "MIT"
+}
