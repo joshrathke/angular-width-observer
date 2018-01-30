@@ -12,9 +12,9 @@
     "Directive",
     "Responsive"
   ],
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/joshrathke/angular-width-observer"
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/joshrathke/angular-width-observer"
   }
   "author": "Josh Rathke",
   "license": "MIT"
