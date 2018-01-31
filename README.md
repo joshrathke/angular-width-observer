@@ -9,7 +9,7 @@ Install using NPM
 In order to use the directive you will need to import the `AngularWidthObserverModule` into the module's you want to use the `AngularWidthObserverDirective` in.
 
 ```typescript
-import { AngularWidthObserverModule } from 'angular-width-observer/angular-width-observer.module';
+import { AngularWidthObserverModule } from 'angular-width-observer/dist';
     
 @NgModule({
   imports: [
